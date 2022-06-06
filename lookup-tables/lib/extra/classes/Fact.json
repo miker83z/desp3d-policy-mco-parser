@@ -1,0 +1,29 @@
+{
+  "@id": ["identifier"],
+  "dpv:hasdatacontroller": ["hasDataController"],
+  "dpv:hasdatasubject": ["hasDataSubject"],
+  "dpv:haslegalbasis": ["hasLegalBasis"],
+  "dpv:haspersonaldata": ["hasPersonalData"],
+  "dpv:haspersonaldatahandling": ["hasPersonalDataHandling"],
+  "dpv:hasprocessing": ["hasProcessing"],
+  "dpv:haspurpose": ["hasPurpose"],
+  "dpv:hasrecipient": ["hasRecipient"],
+  "dpv:hasright": ["hasRight"],
+  "dpv:hasrisk": ["hasRisk"],
+  "dpv:hastechnicalorganisationalmeasure": [
+    "hasTechnicalOrganisationalMeasure"
+  ],
+  "dpv:hasconsentnotice": ["hasConsentNotice"],
+  "dpv:hasexpiry": ["hasExpiry"],
+  "dpv:hasexpirycondition": ["hasExpiryCondition"],
+  "dpv:hasexpirytime": ["hasExpiryTime"],
+  "dpv:hasprovisionby": ["hasProvisionBy"],
+  "dpv:hasprovisionbyjustification": ["hasProvisionByJustification"],
+  "dpv:hasprovisionmethod": ["hasProvisionMethod"],
+  "dpv:hasprovisiontime": ["hasProvisionTime"],
+  "dpv:haswithdrawalby": ["hasWithdrawalBy"],
+  "dpv:haswithdrawalbyjustification": ["hasWithdrawalByJustification"],
+  "dpv:haswithdrawalmethod": ["hasWithdrawalMethod"],
+  "dpv:haswithdrawaltime": ["hasWithdrawalTime"],
+  "dpv:isexplicit": ["isExplicit"]
+}

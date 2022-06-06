@@ -1,79 +1,23 @@
 const { addElement } = require('../AddElement');
-const lut = require('../../../lookup-tables/lib/classes/Action');
-
-const factObj = {
-  identifier: 'string',
-  type: 'string',
-  isTrue: 'boolean',
-};
-const factCompositionObj = {
-  ...factObj,
-  compositionType: 'string',
-  composedFacts: 'array',
-};
-const actionEventFactObj = {
-  ...factObj,
-  validity: 'string',
-  withDelay: 'string',
-  status: 'string',
-  makesTrue: 'array',
-};
-const togetherWithObj = {
-  ...factObj,
-  withIPEntity: 'string',
-};
-const onlyRestrictionObj = {
-  ...factObj,
-  restriction: 'string',
-};
-const ipentityContextObj = {
-  ...factObj,
-  partOf: 'array',
-};
-const languageObj = {
-  ...factObj,
-  languages: 'array',
-};
-const lengthObj = {
-  ...factObj,
-  maxLength: 'string',
-};
-const materialFormatObj = {
-  ...factObj,
-  matchesFormatComplianceProfile: 'string',
-  aspectRatio: 'string',
-  audioFormat: 'string',
-  format: 'string',
-  maxBitrate: 'number',
-  maxLines: 'number',
-  minBitrate: 'number',
-  minLines: 'number',
-  videoFormat: 'string',
-};
-const runsObj = {
-  ...factObj,
-  numberOfRuns: 'number',
-  validity: 'string',
-  numberOfRepetitions: 'number',
-};
-const serviceChannelContextObj = {
-  ...factObj,
-  servicesAndChannels: 'array',
-};
-const spatialContextObj = {
-  ...factObj,
-  countries: 'array',
-};
-const temporalContextObj = {
-  ...factObj,
-  afterDate: 'string',
-  beforeDate: 'string',
-};
-const userTimeAccessObj = {
-  ...factObj,
-  restriction: 'string',
-  validity: 'string',
-};
+const { Fact: lut } = require('../../../lookup-tables');
+const {
+  factObj,
+  factCompositionObj,
+  actionEventFactObj,
+  togetherWithObj,
+  onlyRestrictionObj,
+  ipentityContextObj,
+  languageObj,
+  lengthObj,
+  materialFormatObj,
+  runsObj,
+  serviceChannelContextObj,
+  spatialContextObj,
+  temporalContextObj,
+  userTimeAccessObj,
+  personalDataObj,
+  consentObj,
+} = require('../types/Fact');
 
 const generateFact = (classData, payload) => {
   const obj = { class: classData[0] };
@@ -164,6 +108,23 @@ const generateFact = (classData, payload) => {
           addElement(modelObj, obj, 'restriction', classData[2]);
         }
         break;
+
+      // Personal data
+      case 'PersonalDataHandling':
+        modelObj = personalDataObj;
+        obj.class = classData[classData.length - 1];
+        break;
+      case 'LegalBasis':
+        modelObj = personalDataObj;
+        obj.class = classData[classData.length - 1];
+        if (classData[2] === 'Consent') {
+          modelObj = consentObj;
+        }
+        break;
+      case 'Purpose':
+        modelObj = personalDataObj;
+        obj.class = classData[classData.length - 1];
+        break;
       default:
         break;
     }
@@ -173,7 +134,8 @@ const generateFact = (classData, payload) => {
   Object.keys(payload).forEach((k) => {
     if (lut[k.toLowerCase()] !== undefined)
       addElement(modelObj, obj, lut[k.toLowerCase()], payload[k], k);
-    else if (k !== '@type') console.log('Warning! Left out:' + payload[k]); //addElement(modelObj, obj, 'extra', payload[k], k);
+    else if (k !== '@type')
+      console.log('Warning! Left out:' + payload[k] + ', because:' + k); //addElement(modelObj, obj, 'extra', payload[k], k);
   });
 
   return obj;

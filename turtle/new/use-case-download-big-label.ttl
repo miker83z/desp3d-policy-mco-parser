@@ -30,7 +30,7 @@
         mvco:actedBy             <http://mpeg.org/Consumer> ;
         mco-pane:hasAmount       1 ;
         mco-pane:hasBeneficiary  <http://mpeg.org/DigitalSale> ;
-        mco-pane:hasCurency      "USD" .
+        mco-pane:hasCurrency      "USD" .
 
 <http://mpeg.org/obligation2>
         a                         mco-core:Obligation ;
@@ -45,7 +45,7 @@
         mvco:actedBy             <http://mpeg.org/Publisher> ;
         mco-pane:hasAmount       2 ;
         mco-pane:hasBeneficiary  <http://mpeg.org/SongWriter> ;
-        mco-pane:hasCurency      "USD cents" .
+        mco-pane:hasCurrency      "USD cents" .
 
 <http://mpeg.org/action1>
         a               mco-rele:Play ;
@@ -189,7 +189,7 @@
         mvco:actedBy             <http://mpeg.org/RecordLabel> ;
         mco-pane:hasAmount       9 ;
         mco-pane:hasBeneficiary  <http://mpeg.org/Publisher> ;
-        mco-pane:hasCurency      "USD cents" .
+        mco-pane:hasCurrency      "USD cents" .
 
 <http://mpeg.org/obligation3>
         a                         mco-core:Obligation ;

@@ -11,11 +11,14 @@ const TextClause = require('./lib/classes/TextClause.json');
 const Timeline = require('./lib/classes/Timeline.json');
 const Track = require('./lib/classes/Track.json');
 
+const extraAll = require('./lib/extra/AllClasses.json');
+const extraFact = require('./lib/extra/classes/Fact.json');
+
 module.exports = {
-  AllClasses,
+  AllClasses: { ...AllClasses, ...extraAll },
   Action,
   Contract,
-  Fact,
+  Fact: { ...Fact, ...extraFact },
   Interval,
   IPEntity,
   MCODeonticExpression,

@@ -34,7 +34,7 @@
         mvco:actedBy             <http://mpeg.org/Consumer> ;
         mco-pane:hasAmount       19 ;
         mco-pane:hasBeneficiary  <http://mpeg.org/StreamingService> ;
-        mco-pane:hasCurency      "EUR" .
+        mco-pane:hasCurrency      "EUR" .
 
 <http://mpeg.org/obligation2>
         a                         mco-core:Obligation ;

@@ -1,0 +1,486 @@
+{
+  "dpv:personaldatahandling": ["Fact", "PersonalDataHandling"],
+  "dpv:legalbasis": ["Fact", "LegalBasis"],
+  "dpv:purpose": ["Fact", "Purpose"],
+  "dpv:sector": ["Fact", "Sector"],
+  "dpv:processing": ["Action", "Processing"],
+  "dpv:data": ["IPEntity", "Data"],
+  "dpv:legalentity": ["Party", "LegalEntity"],
+  "dpv:consent": ["Fact", "LegalBasis", "Consent"],
+  "dpv:contract": ["Fact", "LegalBasis", "Contract"],
+  "dpv:datatransferlegalbasis": [
+    "Fact",
+    "LegalBasis",
+    "DataTransferLegalBasis"
+  ],
+  "dpv:legalobligation": ["Fact", "LegalBasis", "LegalObligation"],
+  "dpv:legitimateinterest": ["Fact", "LegalBasis", "LegitimateInterest"],
+  "dpv:officialauthorityofcontroller": [
+    "Fact",
+    "LegalBasis",
+    "OfficialAuthorityOfController"
+  ],
+  "dpv:publicinterest": ["Fact", "LegalBasis", "PublicInterest"],
+  "dpv:vitalinterest": ["Fact", "LegalBasis", "VitalInterest"],
+  "dpv:contractperformance": [
+    "Fact",
+    "LegalBasis",
+    "Contract",
+    "ContractPerformance"
+  ],
+  "dpv:enterintocontract": [
+    "Fact",
+    "LegalBasis",
+    "Contract",
+    "EnterIntoContract"
+  ],
+  "dpv:legitimateinterestofcontroller": [
+    "Fact",
+    "LegalBasis",
+    "LegitimateInterest",
+    "LegitimateInterestOfController"
+  ],
+  "dpv:legitimateinterestofthirdparty": [
+    "Fact",
+    "LegalBasis",
+    "LegitimateInterest",
+    "LegitimateInterestOfThirdParty"
+  ],
+  "dpv:vitalinterestofnaturalperson": [
+    "Fact",
+    "LegalBasis",
+    "VitalInterest",
+    "VitalInterestOfNaturalPerson"
+  ],
+  "dpv:vitalinterestofdatasubject": [
+    "Fact",
+    "LegalBasis",
+    "VitalInterest",
+    "VitalInterestOfNaturalPerson",
+    "VitalInterestOfDataSubject"
+  ],
+
+  "dpv:accountmanagement": ["Fact", "Purpose", "AccountManagement"],
+  "dpv:communicationmanagement": ["Fact", "Purpose", "CommunicationManagement"],
+  "dpv:customermanagement": ["Fact", "Purpose", "CustomerManagement"],
+  "dpv:enforcesecurity": ["Fact", "Purpose", "EnforceSecurity"],
+  "dpv:humanresourcemanagement": ["Fact", "Purpose", "HumanResourceManagement"],
+  "dpv:legalcompliance": ["Fact", "Purpose", "LegalCompliance"],
+  "dpv:marketing": ["Fact", "Purpose", "Marketing"],
+  "dpv:organisationgovernance": ["Fact", "Purpose", "OrganisationGovernance"],
+  "dpv:personalisation": ["Fact", "Purpose", "Personalisation"],
+  "dpv:recordmanagement": ["Fact", "Purpose", "RecordManagement"],
+  "dpv:researchanddevelopment": ["Fact", "Purpose", "ResearchAndDevelopment"],
+  "dpv:serviceprovision": ["Fact", "Purpose", "ServiceProvision"],
+  "dpv:vendormanagement": ["Fact", "Purpose", "VendorManagement"],
+  "dpv:academicresearch": [
+    "Fact",
+    "Purpose",
+    "ResearchAndDevelopment",
+    "AcademicResearch"
+  ],
+  "dpv:commercialresearch": [
+    "Fact",
+    "Purpose",
+    "ResearchAndDevelopment",
+    "CommercialResearch"
+  ],
+  "dpv:noncommercialresearch": [
+    "Fact",
+    "Purpose",
+    "ResearchAndDevelopment",
+    "NonCommercialResearch"
+  ],
+  "dpv:advertising": ["Fact", "Purpose", "Marketing", "Advertising"],
+  "dpv:directmarketing": ["Fact", "Purpose", "Marketing", "DirectMarketing"],
+  "dpv:publicrelations": ["Fact", "Purpose", "Marketing", "PublicRelations"],
+  "dpv:socialmediamarketing": [
+    "Fact",
+    "Purpose",
+    "Marketing",
+    "SocialMediaMarketing"
+  ],
+  "dpv:antiterrorismoperations": [
+    "Fact",
+    "Purpose",
+    "EnforceSecurity",
+    "AntiTerrorismOperations"
+  ],
+  "dpv:enforceaccesscontrol": [
+    "Fact",
+    "Purpose",
+    "EnforceSecurity",
+    "EnforceAccessControl"
+  ],
+  "dpv:fraudpreventionanddetection": [
+    "Fact",
+    "Purpose",
+    "EnforceSecurity",
+    "FraudPreventionAndDetection"
+  ],
+  "dpv:identityverification": [
+    "Fact",
+    "Purpose",
+    "EnforceSecurity",
+    "IdentityVerification"
+  ],
+  "dpv:communicationforcustomercare": [
+    "Fact",
+    "Purpose",
+    "CommunicationManagement",
+    "CommunicationForCustomerCare"
+  ],
+  "dpv:payment": ["Fact", "Purpose", "ServiceProvision", "Payment"],
+  "dpv:registrationauthentication": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "RegistrationAuthentication"
+  ],
+  "dpv:requestedserviceprovision": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "RequestedServiceProvision"
+  ],
+  "dpv:sellproducts": ["Fact", "Purpose", "ServiceProvision", "SellProducts"],
+  "dpv:serviceoptimization": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "ServiceOptimization"
+  ],
+  "dpv:servicepersonalization": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "ServicePersonalization"
+  ],
+  "dpv:servicerecordmanagement": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "ServiceRecordManagement"
+  ],
+  "dpv:serviceusageanalytics": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "ServiceUsageAnalytics"
+  ],
+  "dpv:technicalserviceprovision": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "TechnicalServiceProvision"
+  ],
+  "dpv:customercare": ["Fact", "Purpose", "CustomerManagement", "CustomerCare"],
+  "dpv:customerclaimsmanagement": [
+    "Fact",
+    "Purpose",
+    "CustomerManagement",
+    "CustomerClaimsManagement"
+  ],
+  "dpv:customerordermanagement": [
+    "Fact",
+    "Purpose",
+    "CustomerManagement",
+    "CustomerOrderManagement"
+  ],
+  "dpv:customerrelationshipmanagement": [
+    "Fact",
+    "Purpose",
+    "CustomerManagement",
+    "CustomerRelationshipManagement"
+  ],
+  "dpv:customersolvencymonitoring": [
+    "Fact",
+    "Purpose",
+    "CustomerManagement",
+    "CustomerSolvencyMonitoring"
+  ],
+  "dpv:disputemanagement": [
+    "Fact",
+    "Purpose",
+    "OrganisationGovernance",
+    "DisputeManagement"
+  ],
+  "dpv:memberpartnermanagement": [
+    "Fact",
+    "Purpose",
+    "OrganisationGovernance",
+    "MemberPartnerManagement"
+  ],
+  "dpv:organisationcompliancemanagement": [
+    "Fact",
+    "Purpose",
+    "OrganisationGovernance",
+    "OrganisationComplianceManagement"
+  ],
+  "dpv:organisationriskmanagement": [
+    "Fact",
+    "Purpose",
+    "OrganisationGovernance",
+    "OrganisationRiskManagement"
+  ],
+  "dpv:vendorpayment": ["Fact", "Purpose", "VendorManagement", "VendorPayment"],
+  "dpv:vendorrecordsmanagement": [
+    "Fact",
+    "Purpose",
+    "VendorManagement",
+    "VendorRecordsManagement"
+  ],
+  "dpv:vendorselectionassessment": [
+    "Fact",
+    "Purpose",
+    "VendorManagement",
+    "VendorSelectionAssessment"
+  ],
+  "dpv:personalisedadvertising": [
+    "Fact",
+    "Purpose",
+    "Personalisation",
+    "PersonalisedAdvertising"
+  ],
+  "dpv:countermoneylaundering": [
+    "Fact",
+    "Purpose",
+    "EnforceSecurity",
+    "CounterMoneyLaundering"
+  ],
+  "dpv:createeventrecommendations": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "CreateEventRecommendations"
+  ],
+  "dpv:createpersonalizedrecommendations": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "CreatePersonalizedRecommendations"
+  ],
+  "dpv:createproductrecommendations": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "CreateProductRecommendations"
+  ],
+  "dpv:creditchecking": [
+    "Fact",
+    "Purpose",
+    "CustomerManagement",
+    "CreditChecking"
+  ],
+  "dpv:deliveryofgoods": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "DeliveryOfGoods"
+  ],
+  "dpv:improveexistingproductsandservices": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "ImproveExistingProductsAndServices"
+  ],
+  "dpv:improveinternalcrmprocesses": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "ImproveInternalCRMProcesses"
+  ],
+  "dpv:increaseservicerobustness": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "IncreaseServiceRobustness"
+  ],
+  "dpv:internalresourceoptimisation": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "InternalResourceOptimisation"
+  ],
+  "dpv:optimisationforconsumer": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "OptimisationForConsumer"
+  ],
+  "dpv:optimisationforcontroller": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "OptimisationForController"
+  ],
+  "dpv:optimiseuserinterface": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "OptimiseUserInterface"
+  ],
+  "dpv:personalisedbenefits": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "PersonalisedBenefits"
+  ],
+  "dpv:personnelmanagement": [
+    "Fact",
+    "Purpose",
+    "OrganisationGovernance",
+    "PersonnelManagement"
+  ],
+  "dpv:personnelpayment": [
+    "Fact",
+    "Purpose",
+    "OrganisationGovernance",
+    "PersonnelPayment"
+  ],
+  "dpv:selldatatothirdparties": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "SellDataToThirdParties"
+  ],
+  "dpv:sellinsightsfromdata": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "SellInsightsFromData"
+  ],
+  "dpv:sellproductstodatasubject": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "SellProductsToDataSubject"
+  ],
+  "dpv:targetedadvertising": [
+    "Fact",
+    "Purpose",
+    "Personalisation",
+    "TargetedAdvertising"
+  ],
+  "dpv:userinterfacepersonalisation": [
+    "Fact",
+    "Purpose",
+    "ServiceProvision",
+    "UserInterfacePersonalisation"
+  ],
+
+  "dpv:acquire": ["Action", "Processing", "Acquire"],
+  "dpv:adapt": ["Action", "Processing", "Adapt"],
+  "dpv:align": ["Action", "Processing", "Align"],
+  "dpv:alter": ["Action", "Processing", "Alter"],
+  "dpv:analyse": ["Action", "Processing", "Analyse"],
+  "dpv:anonymise": ["Action", "Processing", "Anonymise"],
+  "dpv:collect": ["Action", "Processing", "Collect"],
+  "dpv:combine": ["Action", "Processing", "Combine"],
+  "dpv:consult": ["Action", "Processing", "Consult"],
+  "dpv:copy": ["Action", "Processing", "Copy"],
+  "dpv:derive": ["Action", "Processing", "Derive"],
+  "dpv:destruct": ["Action", "Processing", "Destruct"],
+  "dpv:disclose": ["Action", "Processing", "Disclose"],
+  "dpv:disclosebytransmission": [
+    "Action",
+    "Processing",
+    "DiscloseByTransmission"
+  ],
+  "dpv:disseminate": ["Action", "Processing", "Disseminate"],
+  "dpv:erase": ["Action", "Processing", "Erase"],
+  "dpv:generate": ["Action", "Processing", "Generate"],
+  "dpv:infer": ["Action", "Processing", "Infer"],
+  "dpv:makeavailable": ["Action", "Processing", "MakeAvailable"],
+  "dpv:match": ["Action", "Processing", "Match"],
+  "dpv:move": ["Action", "Processing", "Move"],
+  "dpv:obtain": ["Action", "Processing", "Obtain"],
+  "dpv:organise": ["Action", "Processing", "Organise"],
+  "dpv:profiling": ["Action", "Processing", "Profiling"],
+  "dpv:pseudoanonymise": ["Action", "Processing", "PseudoAnonymise"],
+  "dpv:record": ["Action", "Processing", "Record"],
+  "dpv:remove": ["Action", "Processing", "Remove"],
+  "dpv:restrict": ["Action", "Processing", "Restrict"],
+  "dpv:retrieve": ["Action", "Processing", "Retrieve"],
+  "dpv:share": ["Action", "Processing", "Share"],
+  "dpv:store": ["Action", "Processing", "Store"],
+  "dpv:structure": ["Action", "Processing", "Structure"],
+  "dpv:transfer": ["Action", "Processing", "Transfer"],
+  "dpv:transform": ["Action", "Processing", "Transform"],
+  "dpv:transmit": ["Action", "Processing", "Transmit"],
+  "dpv:use": ["Action", "Processing", "Use"],
+  "dpv:personaldata": ["IPEntity", "Data", "PersonalData"],
+  "dpv:nonpersonaldata": ["IPEntity", "Data", "NonPersonalData"],
+  "dpv:anonymiseddata": [
+    "IPEntity",
+    "Data",
+    "NonPersonalData",
+    "AnonymisedData"
+  ],
+  "dpv:collectedpersonaldata": [
+    "IPEntity",
+    "Data",
+    "PersonalData",
+    "CollectedPersonalData"
+  ],
+  "dpv:derivedpersonaldata": [
+    "IPEntity",
+    "Data",
+    "PersonalData",
+    "DerivedPersonalData"
+  ],
+  "dpv:generatedpersonaldata": [
+    "IPEntity",
+    "Data",
+    "PersonalData",
+    "GeneratedPersonalData"
+  ],
+  "dpv:inferredpersonaldata": [
+    "IPEntity",
+    "Data",
+    "PersonalData",
+    "InferredPersonalData"
+  ],
+  "dpv:pseudoanonymiseddata": [
+    "IPEntity",
+    "Data",
+    "PersonalData",
+    "PseudoAnonymisedData"
+  ],
+  "dpv:sensitivepersonaldata": [
+    "IPEntity",
+    "Data",
+    "PersonalData",
+    "SensitivePersonalData"
+  ],
+  "dpv:specialcategorypersonaldata": [
+    "IPEntity",
+    "Data",
+    "PersonalData",
+    "SpecialCategoryPersonalData"
+  ],
+  "dpv:datasubject": ["Party", "LegalEntity", "DataSubject"],
+  "dpv:datacontroller": ["Party", "LegalEntity", "DataController"],
+  "dpv:dataprotectionofficer": [
+    "Party",
+    "LegalEntity",
+    "DataProtectionOfficer"
+  ],
+  "dpv:recipient": ["Party", "LegalEntity", "Recipient"],
+  "dpv:dataexporter": ["Party", "LegalEntity", "DataExporter"],
+  "dpv:dataimporter": ["Party", "LegalEntity", "Recipient", "DataImporter"],
+  "dpv:dataprocessor": ["Party", "LegalEntity", "Recipient", "DataProcessor"],
+  "dpv:thirdparty": ["Party", "LegalEntity", "Recipient", "ThirdParty"],
+  "dpv:datasubprocessor": [
+    "Party",
+    "LegalEntity",
+    "DataProcessor",
+    "DataSubProcessor"
+  ],
+  "dpv:jointdatacontrollers": [
+    "Party",
+    "LegalEntity",
+    "DataController",
+    "JointDataControllers"
+  ]
+}
