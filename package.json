@@ -1,5 +1,5 @@
 {
-  "name": "mco-policy-parser",
+  "name": "policy-mco-parser",
   "version": "1.0.1",
   "description": "This software parses MCO contracts represented in TURTLE  and converts them in IPR Contractual Objects",
   "main": "index.js",
