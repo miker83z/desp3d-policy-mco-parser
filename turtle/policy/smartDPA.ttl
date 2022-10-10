@@ -1,0 +1,194 @@
+@prefix mco-ipre: <urn:mpeg:mpeg21:mco:ipre:2012#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix mvco:  <http://purl.oclc.org/NET/mvco.owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix mco-core: <urn:mpeg:mpeg21:mco:core:2012#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mco-pane: <urn:mpeg:mpeg21:mco:pane:2015#> .
+@prefix mco-rele: <urn:mpeg:mpeg21:mco:rele:2015#> .
+@prefix dpv: <http://www.w3.org/ns/dpv#> .
+
+<did:iid:holder1>
+    a           dpv:DataController ;
+    rdfs:label  "Data Holder" .
+    
+<did:iid:recipient1>
+    a           dpv:DataProcessor ;
+    rdfs:label  "Data Recipient" .
+
+<uri:smartdpa1>
+    a                  mco-core:Contract ;
+    rdfs:label         "Smart Data Processing Agreement for combining and anonymizing location data" ;
+    mco-core:hasParty  <did:iid:holder1> , <did:iid:recipient1> .
+    
+<uri:text4>
+    a                  mco-core:TextualClause ;
+    mco-core:text      "Obligate the recipient to make data available after the processing activity" .
+
+<did:nft:obl001>
+    a                           mco-core:Obligation ;
+    mco-core:implements         <uri:text4> ;
+    mco-core:issuedIn           <uri:smartdpa1> ;
+    mvco:issuedBy               <did:iid:holder1> ;
+    mco-core:obligatesAction    <uri:act003> .
+    
+<uri:act003>
+    a                   dpv:MakeAvailable ;
+    mvco:actedBy        <did:iid:recipient1> ;
+    mvco:actedOver      <did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_664> .
+    
+<did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_664>
+    a                       dpv:AnonymisedData ;
+    mvco:hasRightsOwner     <did:iid:recipient1> ;
+    mvco:resultedFrom       <uri:act301> .
+
+<uri:act301>
+    a               dpv:Anonymise ;
+    mvco:actedBy    <did:iid:recipient1> .
+
+
+<did:nft:cnsnt_givn1>
+    a                       mco-core:Event ;
+    mvco:hasRightsOwner     <did:iid:subject1> ;
+    mco-core:makesTrue      <uri:aef001> ;
+    rdfs:label              "Subject's consent given event (can be withdrawn)" .
+<uri:aef001>
+    a               mco-core:ActionEventFact .
+
+<did:nft:per001>
+    a                       mvco:Permission ;
+    mco-core:issuedIn       <uri:smartdpa1> ;
+    mvco:issuedBy           <did:iid:subject1> ;
+    mco-core:permitsAction  <uri:act001> ;
+    mco-core:hasRequired    <uri:fac001>.
+
+<uri:act001>
+    a                   dpv:Share ;
+    mvco:actedBy        <did:iid:holder1> ;
+    mvco:actedOver      <did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_1> ; 
+    mco-core:makesTrue  <uri:aef002> .
+
+<uri:fac001>
+    a               mco-core:FactIntersection ;
+    mvco:hasFact    <uri:aef001>, <uri:con001> .
+    
+<uri:aef002>
+    a              mco-core:ActionEventFact .
+
+<uri:con001>
+    a                       dpv:Consent ;
+    dpv:hasDataSubject      <did:iid:subject1> ;
+    dpv:hasDataController   <did:iid:holder1> ;
+    dpv:hasProcessing       <uri:repo004>, <uri:repo005> .
+
+<uri:text3>
+    a                  mco-core:TextualClause ;
+    mco-core:text      "Combine and anonymize personal data" .
+    
+<did:nft:per002>
+    a                       mvco:Permission ;
+    mco-core:implements     <uri:text3> ;
+    mco-core:issuedIn       <uri:smartdpa1> ;
+    mvco:issuedBy           <did:iid:holder1> ;
+    mco-core:permitsAction  <uri:act002> ;
+    mco-core:hasRequired    <uri:fac002> .
+
+<uri:act002>
+    a               dpv:Combine ;
+    mvco:actedBy    <did:iid:recipient1> ;
+    mvco:actedOver  <did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_1> .
+
+<uri:fac002>
+    a               mco-core:FactIntersection ;
+    mvco:hasFact    <uri:aef002>, <uri:pdh002> .
+
+<did:nft:cnsnt_givn2>
+    a                       mco-core:Event ;
+    mvco:hasRightsOwner     <did:iid:subject2> ;
+    mco-core:makesTrue      <uri:aef201> ;
+    rdfs:label              "Subject's consent given event (can be withdrawn)" .
+
+<uri:aef201>
+    a               mco-core:ActionEventFact .
+
+<did:nft:per003>
+    a                       mvco:Permission ;
+    mco-core:issuedIn       <uri:smartdpa1> ;
+    mvco:issuedBy           <did:iid:subject2> ;
+    mco-core:permitsAction  <uri:act201> ;
+    mco-core:hasRequired    <uri:fac201>.
+
+<uri:act201>
+    a                   dpv:Share ;
+    mvco:actedBy        <did:iid:holder1> ;
+    mvco:actedOver      <did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_2> ; 
+    mco-core:makesTrue  <uri:aef202> .
+
+<uri:fac201>
+    a               mco-core:FactIntersection ;
+    mvco:hasFact    <uri:aef201>, <uri:con201> .
+    
+<uri:aef202>
+    a               mco-core:ActionEventFact .
+
+<uri:con201>
+    a                       dpv:Consent ;
+    dpv:hasDataSubject      <did:iid:subject2> ;
+    dpv:hasDataController   <did:iid:holder1> ;
+    dpv:hasProcessing       <uri:repo004>,  <uri:repo005> .
+
+<did:nft:per004>
+    a                       mvco:Permission ;
+    mco-core:implements     <uri:text3> ;
+    mco-core:issuedIn       <uri:smartdpa1> ;
+    mvco:issuedBy           <did:iid:holder1> ;
+    mco-core:permitsAction  <uri:act202> ;
+    mco-core:hasRequired    <uri:fac202> .
+
+<uri:act202>
+    a               dpv:Combine ;
+    mvco:actedBy    <did:iid:recipient1> ;
+    mvco:actedOver  <did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_2> .
+
+<uri:fac202>
+    a               mco-core:FactIntersection ;
+    mvco:hasFact    <uri:aef202>, <uri:pdh002> .
+                        
+<uri:pdh002>
+    a                   dpv:PersonalDataHandling ;
+    dpv:hasProcessing      <uri:repo004>, 
+                            <uri:repo005> .
+<uri:repo004>
+    a               dpv:Combine .
+    
+<uri:repo005>
+    a               dpv:Anonymise .
+
+<uri:txt001>
+    a                  mco-core:TextualClause ;
+    mco-core:text      "Location data read-only policy for Targeted Advertising in Social Media" .
+
+<did:iid:subject1>
+    a           dpv:DataSubject ;
+    rdfs:label  "Data Subject 1" .
+
+<did:iid:subject2>
+    a           dpv:DataSubject ;
+    rdfs:label  "Data Subject 2" .
+
+<did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_32>
+    a               dpv:PseudoAnonymisedData ;
+    mvco:hasRightsOwner     <did:iid:subject1> .
+
+<did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_43>
+    a               dpv:SensitivePersonalData ;
+    mvco:hasRightsOwner     <did:iid:subject1> .
+
+<did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_1>
+    a                       dpv:PersonalData ;
+    mvco:isMadeUpOf         <did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_32>, <did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_43> ;
+    mvco:hasRightsOwner     <did:iid:subject1> .
+
+<did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_2>
+    a                       dpv:PersonalData ;
+    mvco:hasRightsOwner     <did:iid:subject2> .

@@ -46,6 +46,7 @@ const getContractFromMCO = (ttl) => {
 
   // Search for all deontic expression objects
   Object.values(jsonLDGraph).forEach((element) => {
+    console.log(element);
     const classData = lut.AllClasses[getType(element).toLowerCase()];
     if (classData[0] === 'MCODeonticExpression') {
       handleMCODeonticExpression(

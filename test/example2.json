@@ -1,0 +1,232 @@
+{
+  "contracts": [
+    {
+      "class": "Contract",
+      "identifier": "uri:smartdpa1",
+      "metadata": {
+        "rdfs:label": "Smart Data Processing Agreement for combining and anonymizing location data"
+      },
+      "parties": {
+        "did:iid:holder1": {
+          "class": "DataController",
+          "identifier": "did:iid:holder1",
+          "metadata": { "rdfs:label": "Data Holder" },
+          "deonticsIssued": [
+            "did:nft:obl001",
+            "did:nft:per002",
+            "did:nft:per004"
+          ],
+          "actionsIsSubject": ["uri:act001", "uri:act201"]
+        },
+        "did:iid:recipient1": {
+          "class": "DataProcessor",
+          "identifier": "did:iid:recipient1",
+          "metadata": { "rdfs:label": "Data Recipient" },
+          "actionsIsSubject": [
+            "uri:act003",
+            "uri:act301",
+            "uri:act002",
+            "uri:act202"
+          ]
+        }
+      },
+      "deontics": {
+        "did:nft:obl001": {
+          "class": "Obligation",
+          "type": "Obligation",
+          "identifier": "did:nft:obl001",
+          "textClauses": ["uri:text4"],
+          "issuedIn": "uri:smartdpa1",
+          "issuer": "did:iid:holder1",
+          "act": "uri:act003",
+          "actedBySubject": "did:iid:recipient1",
+          "actObjects": [
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_664"
+          ]
+        },
+        "did:nft:per001": {
+          "class": "MCOPermission",
+          "type": "MCOPermission",
+          "identifier": "did:nft:per001",
+          "issuedIn": "uri:smartdpa1",
+          "issuer": "did:iid:subject1",
+          "act": "uri:act001",
+          "constraints": ["uri:fac001"],
+          "actedBySubject": "did:iid:holder1",
+          "actObjects": [
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_1"
+          ]
+        },
+        "did:nft:per002": {
+          "class": "MCOPermission",
+          "type": "MCOPermission",
+          "identifier": "did:nft:per002",
+          "textClauses": ["uri:text3"],
+          "issuedIn": "uri:smartdpa1",
+          "issuer": "did:iid:holder1",
+          "act": "uri:act002",
+          "constraints": ["uri:fac002"],
+          "actedBySubject": "did:iid:recipient1",
+          "actObjects": [
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_1"
+          ]
+        },
+        "did:nft:per003": {
+          "class": "MCOPermission",
+          "type": "MCOPermission",
+          "identifier": "did:nft:per003",
+          "issuedIn": "uri:smartdpa1",
+          "issuer": "did:iid:subject2",
+          "act": "uri:act201",
+          "constraints": ["uri:fac201"],
+          "actedBySubject": "did:iid:holder1",
+          "actObjects": [
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_2"
+          ]
+        },
+        "did:nft:per004": {
+          "class": "MCOPermission",
+          "type": "MCOPermission",
+          "identifier": "did:nft:per004",
+          "textClauses": ["uri:text3"],
+          "issuedIn": "uri:smartdpa1",
+          "issuer": "did:iid:holder1",
+          "act": "uri:act202",
+          "constraints": ["uri:fac202"],
+          "actedBySubject": "did:iid:recipient1",
+          "actObjects": [
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_2"
+          ]
+        }
+      },
+      "actions": {
+        "uri:act003": {
+          "class": "MakeAvailable",
+          "type": "Processing",
+          "identifier": "uri:act003",
+          "actedBy": "did:iid:recipient1",
+          "actedOver": [
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_664"
+          ]
+        },
+        "uri:act301": {
+          "class": "Anonymise",
+          "type": "Processing",
+          "identifier": "uri:act301",
+          "actedBy": "did:iid:recipient1"
+        },
+        "uri:act001": {
+          "class": "Share",
+          "type": "Processing",
+          "identifier": "uri:act001",
+          "actedBy": "did:iid:holder1",
+          "actedOver": [
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_1"
+          ]
+        },
+        "uri:act002": {
+          "class": "Combine",
+          "type": "Processing",
+          "identifier": "uri:act002",
+          "actedBy": "did:iid:recipient1",
+          "actedOver": [
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_1"
+          ]
+        },
+        "uri:act201": {
+          "class": "Share",
+          "type": "Processing",
+          "identifier": "uri:act201",
+          "actedBy": "did:iid:holder1",
+          "actedOver": [
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_2"
+          ]
+        },
+        "uri:act202": {
+          "class": "Combine",
+          "type": "Processing",
+          "identifier": "uri:act202",
+          "actedBy": "did:iid:recipient1",
+          "actedOver": [
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_2"
+          ]
+        }
+      },
+      "objects": {
+        "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_664": {
+          "class": "AnonymisedData",
+          "type": "Data",
+          "identifier": "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_664",
+          "rightsOwners": ["did:iid:recipient1"],
+          "resultedFrom": ["uri:act301"]
+        },
+        "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_1": {
+          "class": "PersonalData",
+          "type": "Data",
+          "identifier": "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_1",
+          "isMadeUpOf": [
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_32",
+            "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_43"
+          ],
+          "rightsOwners": ["did:iid:subject1"]
+        },
+        "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_32": {
+          "class": "PseudoAnonymisedData",
+          "type": "Data",
+          "identifier": "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_32",
+          "rightsOwners": ["did:iid:subject1"]
+        },
+        "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_43": {
+          "class": "SensitivePersonalData",
+          "type": "Data",
+          "identifier": "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_43",
+          "rightsOwners": ["did:iid:subject1"]
+        },
+        "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_2": {
+          "class": "PersonalData",
+          "type": "Data",
+          "identifier": "did:nft:eip155:1_erc721:0xa437b30051601bd54ffee7de357b28e1488929rt_2",
+          "rightsOwners": ["did:iid:subject2"]
+        }
+      },
+      "textClauses": {
+        "uri:text4": {
+          "class": "TextClause",
+          "identifier": "uri:text4",
+          "text": "Obligate the recipient to make data available after the processing activity"
+        },
+        "uri:text3": {
+          "class": "TextClause",
+          "identifier": "uri:text3",
+          "text": "Combine and anonymize personal data"
+        }
+      },
+      "facts": {
+        "uri:fac001": {
+          "class": "FactIntersection",
+          "compositionType": "FactIntersection",
+          "type": "FactComposition",
+          "identifier": "uri:fac001"
+        },
+        "uri:fac002": {
+          "class": "FactIntersection",
+          "compositionType": "FactIntersection",
+          "type": "FactComposition",
+          "identifier": "uri:fac002"
+        },
+        "uri:fac201": {
+          "class": "FactIntersection",
+          "compositionType": "FactIntersection",
+          "type": "FactComposition",
+          "identifier": "uri:fac201"
+        },
+        "uri:fac202": {
+          "class": "FactIntersection",
+          "compositionType": "FactIntersection",
+          "type": "FactComposition",
+          "identifier": "uri:fac202"
+        }
+      }
+    }
+  ]
+}
